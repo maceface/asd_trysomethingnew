@@ -146,9 +146,11 @@ $('#addLog').on('pageinit', function(){
 $('#iSpyLocal').on('pageinit', function(){
 	// console.log("View iSpyLog page Loaded")
 	$("#clearLog").click (chopLogs);
+	
+	$("#displayData").click (getData);
 
-	$(".showDefaults").click (getData);
 });
+
 $("#jsonImports").on('pageinit',function(){
 	 console.log("Import page Loaded")
 	$('#jsonData').on("click", function(){

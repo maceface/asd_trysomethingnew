@@ -19,3 +19,8 @@ label.error{
 	color:rgb(250.0.0);
 
 }
+
+#homeIndex, #addLog, #iSpyLocal, #jsonImports, #quod {
+	text-align: center;
+	background-image: url("../images/bg_watercolor.png");
+}
