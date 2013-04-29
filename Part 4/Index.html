@@ -1,0 +1,410 @@
+<!doctype html> 
+<!-- % % % % % DANA MACE % % % % % -->
+<!--  % % % THE GRATEFUL LOG % % % -->
+
+<html lang="en"> <!-- creates an html document -->
+	<head> <!-- sets off the title and other information 
+		that isn’t displayed on the web page itself -->
+		<meta charset="utf-8">
+			<!-- This defines what character coding is used in the page.  
+			
+			UTF-8 is a variable width Unicode format that is compatible 
+			with ASCII or plain text for the basic alphanumeric characters.
+			
+			By using the 'upper half' of the 8 bit ASCII set and extension 
+			codes, it can handle over a million unique characters...
+			
+			It's a requirement that any web page defines the formatting of 
+			the page within it's header info, so any browser knows exactly 
+			how to interpret the content. -->		
+		<meta name="robots" content="index, follow" />
+		<!--  Mobile viewport optimized -->
+		<meta name="HandheldFriendly" content="True"/>
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- This makes sure that the browser window is the right size 
+			(width=device-width)
+		
+			initial-scale=1 is what tells not to zoom, but to scale.
+			
+			you could say "maximum-scale=1" which would prevent your user
+			from even zooming in. -->
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+		<!--Page Title-->
+		<title>The Grateful Log</title>
+		
+		<!-- Style Sheets -->
+		<link rel="stylesheet" href="css/themes/jqm/jquery.mobile-1.3.0.min.css">
+		<link rel="stylesheet" href="css/themes/jqm/jquery.mobile.structure-1.3.0.min.css">
+		<link rel="stylesheet" href="css/themes/jqm/jquery.mobile.theme-1.3.0.min.css">
+		<link rel="stylesheet" href="css/themes/log.min.css" />
+		<link rel="stylesheet" href="css/styles.css">
+		<!-- JavaScript Modernizr which enables HTML5 elements & feature detects -->
+	</head>
+	<body>
+<!-- %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% -->
+<!-- %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% -->
+<!-- %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% -->
+<!-- %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% INDEX PAGE %%%%% -->
+
+		<div data-role="page" id="homeIndex" data-theme="a">
+			<header data-role="header" data-position="fixed">
+				<h1>The Grateful Log</h1>
+			</header>
+			<section data-role="content">
+				<a>
+					<img src="images/stump2.png" style="width: 100%">
+				</a>
+				<br>
+				<br>
+				<a href="#addLog">
+					<img src="images/new.png" style="width: 100%">
+				</a>
+				<br>
+				<br>
+				<a href="#iSpyLocal">
+					<img src="images/old.png" style="width: 100%">
+				</a>
+			</section>
+			<footer data-roll="footer">
+				<nav data-role="navbar" data-theme="a" data-position="fixed" data-iconpos="left">
+					<ul>
+						<li>
+							<a href="#homeIndex" data-icon="home" class="ui-btn-active">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#quod" data-icon="bars">
+								Quote of the Day
+							</a>
+						</li>
+						<li>
+							<a href="#iSpyLocal" data-icon="star">
+								Share Logs
+							</a>
+						</li>
+						<li>
+							<a href="#jsonImports" data-icon="edit">
+								Import Logs
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
+		
+<!-- %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE -->
+<!-- %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE -->
+<!-- %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE -->
+<!-- %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE %%%%% FORM PAGE -->
+
+		
+		<div data-role="page" id="addLog" data-theme="a">
+			<header data-role="header" data-position="fixed">
+				<h1>The Grateful Log</h1>
+				<a href="#iSpyLocal" id="lookAtGrats" data-role="button" data-icon="grid" data-transition="slide" class="ui-btn-right" data-iconpos="notext">
+				</a>
+			</header>
+			<section data-role="content">
+				<form action="#" method="post" id="addItem">
+					<label id="mustLog" class="required">
+						*Required Fields
+					</label>
+					<br>
+					<section data-role="fieldcontain">
+						<label for="gDate" >
+							*Date
+						</label>
+						<input type="text" id="gDate" name="gDate" class="required" placeholder="mm/dd/yyyy" data-clear-btn="true" data-theme="a"/>
+					</section>
+					<section data-role="fieldcontain">
+						<label for="gWhat">
+							*What are you grateful for?:
+						</label>
+						<textarea name="gWhat" id="gWhat" class="required" placeholder="I am grateful for . . ." data-theme="a">
+							
+						</textarea>
+					</section><!-- Detailed Description Field -->
+					<section data-role="fieldcontain">
+						<label for="gColor">
+							*Favorite Color of the Day:
+						</label>
+						<select name="gColor" class="required" id="gColor" data-theme="a" >
+							<option value="" data-placeholder="true" >
+								Select A Color
+							</option>
+							<option value="Yellow">
+								Yellow
+							</option>
+							<option value="Pink">
+								Pink
+							</option>
+							<option value="Blue">
+								Blue
+							</option>
+							<option value="Green">
+								Green
+							</option>
+							<option value="Red">
+								Red
+							</option>
+							<option value="Orange">
+								Orange
+							</option>
+						</select>
+					</section>
+					<section data-role="fieldcontain">
+	    				<fieldset data-role="controlgroup" >
+							<input type="checkbox" value="Flowers" name="checked" id="Flowers"/>
+							<label for="Flowers" id="Flowers"><strong>Flowers</strong></label>
+						
+							<input type="checkbox" value="Sunshine" name="checked" id="Sunshine"/>
+							<label for="Sunshine" id="Sunshine"><strong>Sunshine</strong></label>
+			                            
+							<input type="checkbox" value="Stars" name="checked" id="Stars"/>
+							<label for="Stars" id="Stars"><strong>Stars</strong></label>
+			                            
+							<input type="checkbox" value="Moon" name="checked" id="Moon"/>
+							<label for="Moon" id="Moon"><strong>Moon</strong></label>
+			                            
+							<input type="checkbox" value="Grass" name="checked" id="Grass"/>
+							<label for="Grass" id="Grass"><strong>Grass</strong></label>
+			                            
+							<input type="checkbox" value="Birds" name="checked" id="Birds"/>
+							<label for="Birds" id="Birds"><strong>Birds</strong></label>
+					    </fieldset>
+					</section>
+					<section data-role="fieldcontain">
+						<label for="gTime">
+							What time is it?
+						</label>
+						<input type="text" id="gTime" name="gTimes"req placeholder="Time"  data-clear-btn="true" data-theme="a"/>
+					</section>
+					<section data-role="fieldcontain">
+							<fieldset class="ui-grid-a">
+								<section class="ui-block-a"><input type="submit" value="Save Log" id="add" data-inline="true" data-icon="check" data-theme="a"/>
+								</section>
+								<section class="ui-block-b"><input type="reset" value="Delete Log" id="cancel" data-inline="true" data-icon="delete" data-theme="a"/>
+								</section>
+							</fieldset>
+					</section><!-- Submit Button Field -->
+					<a href="#errorLog" id="errorLogLink" data-rel="dialog" data-transition="pop">
+						Required Fields
+					</a>
+				</form>
+			</section>
+			<footer data-roll="footer">
+				<nav data-role="navbar" data-theme="a" data-position="fixed" data-iconpos="left">
+					<ul>
+						<li>
+							<a href="#homeIndex" data-icon="home">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#quod" data-icon="bars">
+								Quote of the Day
+							</a>
+						</li>
+						<li>
+							<a href="#iSpyLocal" data-icon="star">
+								Share Logs
+							</a>
+						</li>
+						<li>
+							<a href="#jsonImports" data-icon="edit">
+								Import Logs
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
+		
+<!-- %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% -->
+<!-- %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% -->
+<!-- %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% -->
+<!-- %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% iSpyLocal Page %%%%% -->
+
+		
+		<div data-role="page" id="iSpyLocal" data-theme="a">
+			<header data-role="header" data-position="fixed">
+				<h1>The Grateful Log</h1>
+				<a href="#addLog" id="makeLog" data-role="button" data-icon="plus" data-transition="slide" class="ui-btn-right" data-iconpos="notext">
+				</a>
+			</header>
+			<fieldset class="ui-grid-a">
+				<section class="ui-block-a display">
+					<a href="#" id="displayData" data-role="button"  data-mini="true" data-theme="a" data-icon="arrow-r" data-iconpos="right" >
+						View All Logs
+					</a>
+				</section>
+				<section class="ui-block-b">
+					<a href="#" id="clearLog" data-role="button" data-mini="true" data-theme="a" data-icon="arrow-r" data-iconpos="right" >
+						Delete All Logs
+					</a><!-- Clear/Display Button Field -->
+				</section>
+			</fieldset>
+			<br>
+			<ul data-role="listview" data-theme="a" data-divider-theme="a" id="logList" data-filter="true">  
+				<li>
+					<h3>No Logged Gratitudes</h3>
+					<p>
+						<strong>
+							There are currently no gratitudes logged.
+						</strong>
+					</p>
+				</li>
+            </ul>
+			
+			<footer data-roll="footer">
+				<nav data-role="navbar" data-theme="a" data-position="fixed" data-iconpos="left">
+					<ul>
+						<li>
+							<a href="#homeIndex" data-icon="home">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#quod" data-icon="bars">
+								Quote of the Day
+							</a>
+						</li>
+						<li>
+							<a href="#iSpyLocal" data-icon="star">
+								Share Logs
+							</a>
+						</li>
+						<li>
+							<a href="#jsonImports" data-icon="edit">
+								Import Logs
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
+		
+<!-- %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page -->
+<!-- %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page -->
+<!-- %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page -->
+<!-- %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page %%%%% oneLog Page -->
+		
+		<div data-role="page" id="jsonImports" data-theme="a">
+			<header data-role="header" data-position="fixed">
+				<h1>The Grateful Log</h1>
+				<a href="#addLog" id="makeLog" data-role="button" data-icon="plus" data-transition="slide" class="ui-btn-right" data-iconpos="notext">
+				</a>
+			</header>
+			<section data-role="content" class="ui-grid-a">
+				<h2>Import Logs</h2>
+				<a href="#" id="jsonData" data-transition="flip" data-role="button" class="ui-block-a" data-inline="true">
+					JSON Logs
+				</a>
+				<a href="#" id="csv" data-transition="flip" data-role="button" class="ui-block-b" data-inline="true">
+					CSV Logs
+				</a>
+				<h2 id="design"></h2>
+				<ul id="otherData">
+		        </ul>
+			</section>
+			<footer data-roll="footer">
+				<nav data-role="navbar" data-theme="a" data-position="fixed" data-iconpos="left">
+					<ul>
+						<li>
+							<a href="#homeIndex" data-icon="home">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#quod" data-icon="bars">
+								Quote of the Day
+							</a>
+						</li>
+						<li>
+							<a href="#iSpyLocal" data-icon="star">
+								Share Logs
+							</a>
+						</li>
+						<li>
+							<a href="#jsonImports" data-icon="edit" class="ui-btn-active">
+								Import Logs
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+		</div>
+		
+<!-- %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% -->
+<!-- %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% -->
+<!-- %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% -->
+<!-- %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% Quote Page %%%%% -->
+
+		<div data-role="page" id="quod" data-theme="a">
+			<header data-role="header" data-position="fixed" data-theme="a">
+				<h1>The Grateful Log</h1>
+				<a href="#addLog" id="makeLog" data-role="button" data-icon="plus" data-transition="slidefade" class="ui-btn-right" data-iconpos="notext">
+				</a>
+			</header>
+			<section data-role="content">
+				<div>
+					<br>
+					<h1>Populate new quote daily here</h3>
+						<h5>Plug-In???</h5>
+				</div>
+			</section>
+			<footer data-roll="footer">
+				<nav data-role="navbar" data-theme="a" data-position="fixed" data-iconpos="left">
+					<ul>
+						<li>
+							<a href="#homeIndex" data-icon="home">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="#quod" data-icon="bars">
+								Quote of the Day
+							</a>
+						</li>
+						<li>
+							<a href="#iSpyLocal" data-icon="star">
+								Share Logs
+							</a>
+						</li>
+						<li>
+							<a href="#jsonImports" data-icon="edit">
+								Import Logs
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</footer>
+
+		
+<!-- %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% -->
+<!-- %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% -->
+<!-- %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% -->
+<!-- %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% ERROR Page %%%%% -->
+
+		<div data-role="dialog" id="errorLog">	
+			<header data-role="header" data-position="fixed" data-theme="a">
+				<h1>Missing Required Items</h1>
+			</header><!-- Header -->
+			<section data-role="content">
+				<ul>
+					<li>Test</li>
+				</ul>
+			</section>
+		</div>
+		
+		<!-- JS links -->
+		<script type="text/javascript" src="js/libs/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.mobile-1.3.0.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js/json.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
