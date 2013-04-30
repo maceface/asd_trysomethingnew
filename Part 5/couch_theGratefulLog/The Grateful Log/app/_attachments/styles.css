@@ -1,0 +1,26 @@
+/*	
+	Dana Mace
+	ASD 1304
+	Project 3
+*/
+label.error{
+	margin:15px;
+	font-weight: bold;
+	display:block; 
+	color:#fb1313;
+}
+
+#errorLogLink{
+	display:none;
+}
+
+
+#mustLog {
+	color:rgb(250.0.0);
+
+}
+
+#homeIndex, #addLog, #iSpyLocal, #jsonImports, #quod {
+	text-align: center;
+	background-image: url("../images/bg_watercolor.png");
+}
