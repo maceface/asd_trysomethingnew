@@ -35,11 +35,11 @@
 		<title>The Grateful Log</title>
 		
 		<!-- Style Sheets -->
-		<link rel="stylesheet" href="css/themes/jqm/jquery.mobile-1.3.0.min.css">
-		<link rel="stylesheet" href="css/themes/jqm/jquery.mobile.structure-1.3.0.min.css">
-		<link rel="stylesheet" href="css/themes/jqm/jquery.mobile.theme-1.3.0.min.css">
-		<link rel="stylesheet" href="css/themes/log.min.css" />
-		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="jquery.mobile-1.3.0.min.css">
+		<link rel="stylesheet" href="jquery.mobile.structure-1.3.0.min.css">
+		<link rel="stylesheet" href="jquery.mobile.theme-1.3.0.min.css">
+		<link rel="stylesheet" href="log.min.css" />
+		<link rel="stylesheet" href="styles.css">
 		<!-- JavaScript Modernizr which enables HTML5 elements & feature detects -->
 	</head>
 	<body>
@@ -54,17 +54,17 @@
 			</header>
 			<section data-role="content">
 				<a>
-					<img src="images/stump2.png" style="width: 100%">
+					<img src="stump2.png" style="width: 100%">
 				</a>
 				<br>
 				<br>
 				<a href="#addLog">
-					<img src="images/new.png" style="width: 100%">
+					<img src="new.png" style="width: 100%">
 				</a>
 				<br>
 				<br>
 				<a href="#iSpyLocal">
-					<img src="images/old.png" style="width: 100%">
+					<img src="old.png" style="width: 100%">
 				</a>
 			</section>
 			<footer data-roll="footer">
@@ -156,9 +156,6 @@
 						</select>
 					</section>
 					<section data-role="fieldcontain">
-						<label for="checkbox">
-							Which items do you like best?
-						</label>
 	    				<fieldset data-role="controlgroup" >
 							<input type="checkbox" value="Flowers" name="checked" id="Flowers"/>
 							<label for="Flowers" id="Flowers"><strong>Flowers</strong></label>
@@ -261,58 +258,7 @@
 					</p>
 				</li>
             </ul>
-            <div>
-            	<a href="#ajaxPage" id="jsonButton" data-role="button" data-theme="a" data-iconpos="right" >
-						json ajax button
-					</a>
-            </div>
 			
-			<footer data-roll="footer">
-				<nav data-role="navbar" data-theme="a" data-position="fixed" data-iconpos="left">
-					<ul>
-						<li>
-							<a href="#homeIndex" data-icon="home">
-								Home
-							</a>
-						</li>
-						<li>
-							<a href="#quod" data-icon="bars">
-								Quote of the Day
-							</a>
-						</li>
-						<li>
-							<a href="#iSpyLocal" data-icon="star">
-								Share Logs
-							</a>
-						</li>
-						<li>
-							<a href="#jsonImports" data-icon="edit">
-								Import Logs
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</footer>
-		</div>
-		
-<!-- %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page -->		
-<!-- %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page -->		
-<!-- %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page -->		
-<!-- %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page %%%%% ajax Page -->		
-
-		<div data-role="page" id="ajaxPage" data-theme="a">
-			<header data-role="header" data-position="fixed">
-				<h1>The Grateful Log</h1>
-				<a href="#addLog" id="makeLog" data-role="button" data-icon="plus" data-transition="slide" class="ui-btn-right" data-iconpos="notext">
-				</a>
-			</header>
-			<section data-role="content">
-				<article id="ajaxJSON">
-					<ul id="loggingList" data-role="listview" data-autodividers="false" data-icon="arrow-d">
-						
-					</ul>
-				</article>
-			</section>
 			<footer data-roll="footer">
 				<nav data-role="navbar" data-theme="a" data-position="fixed" data-iconpos="left">
 					<ul>
@@ -455,10 +401,10 @@
 		</div>
 		
 		<!-- JS links -->
-		<script type="text/javascript" src="js/libs/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="js/libs/jquery.mobile-1.3.0.min.js"></script>
-		<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="js/json.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="jquery.mobile-1.3.0.min.js"></script>
+		<script type="text/javascript" src="jquery.validate.min.js"></script>
+		<script type="text/javascript" src="json.js"></script>
+		<script type="text/javascript" src="main.js"></script>
 	</body>
 </html>
